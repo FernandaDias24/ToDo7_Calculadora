@@ -9,5 +9,6 @@ const port = 3000;
 app.get("/soma", Cal_Cont.soma);
 app.get("/subitracao", Cal_Cont.subitracao);
 app.get("/multiplicacao", Cal_Cont.multiplicacao);
+app.get("/divisao", Cal_Cont.divisao);
 app.listen(port, () => console.log('Servidor rodando na porta 3000'));
 module.exports = app;

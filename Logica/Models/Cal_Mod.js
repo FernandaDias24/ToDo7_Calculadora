@@ -9,7 +9,7 @@ class Cal_Cont{
 
     static async subitracao (n1, n2){
         if (Number(n1) & Number(n2)){
-            const resultatoSubitracao = n1 + n2
+            const resultatoSubitracao = n1 - n2
             return resultatoSubitracao;
         }
         else throw new Error("Pelo menos um dos caracteres não são numeros");
@@ -17,8 +17,16 @@ class Cal_Cont{
 
     static async multiplicacao (n1, n2){
         if (Number(n1) & Number(n2)){
-            const resultatoMultiplicacao = n1 + n2
+            const resultatoMultiplicacao = n1 * n2
             return resultatoMultiplicacao;
+        }
+        else throw new Error("Pelo menos um dos caracteres não são numeros");
+    }
+
+    static async divisao (n1, n2){
+        if (Number(n1) & Number(n2)){
+            const resultatoDivisao = n1 / n2
+            return resultatoDivisao;
         }
         else throw new Error("Pelo menos um dos caracteres não são numeros");
     }
