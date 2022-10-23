@@ -23,6 +23,28 @@ class Cal_Cont{
             }
         }
     }
+
+    static async subitracao (req, res){
+        try{
+            const query = req.query;
+            console.log("query: ", query);
+            const values = Object.values(query);
+            console.log("values: ", values);
+            const convertNum = values.map((numero) => {
+                return Number (numero);
+            });
+            console.log("conversão: ", convertNum);
+            const subitracao = await_Cal_Mod.subitracao(...convertNum);
+            res.status(200).json({
+                resultato: subitracao,
+                erro: false
+            });
+        }  catch(erro){
+            if(erro){
+                res.status(400).json({mensagem: "", erro: true});
+            }
+        }
+    }
 };
 
 module.exports = Cal_Cont;

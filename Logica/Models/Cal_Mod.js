@@ -7,6 +7,14 @@ class Cal_Cont{
         else throw new Error("Pelo menos um dos caracteres não são numeros");
     }
 
+    static async subitracao (n1, n2){
+        if (Number(n1) & Number(n2)){
+            const resultatoSubitracao = n1 + n2
+            return resultatoSubitracao;
+        }
+        else throw new Error("Pelo menos um dos caracteres não são numeros");
+    }
+
 }
 
 module.exports = Cal_Cont;

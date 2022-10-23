@@ -11,4 +11,14 @@ describe("Testando rotas da Controller", () => {
             console.log(error);
         }
     })
+
+    test("Teste Subitracao", async () => {
+        try {
+            const res = await request(app).get("/subitracao").query([10, 1]);
+            expect(res.body.resultado).toBe(9);
+            expect(res.body.erro).toBe(false);
+        } catch (error) {
+            console.log(error);
+        }
+    })
 })

@@ -7,5 +7,6 @@ app.use(express.json());
 const port = 3000;
 
 app.get("/soma", Cal_Cont.soma);
+app.get("/subitracao", Cal_Cont.subitracao);
 app.listen(port, () => console.log('Servidor rodando na porta 3000'));
 module.exports = app;
