@@ -45,6 +45,28 @@ class Cal_Cont{
             }
         }
     }
+
+    static async multiplicacao (req, res){
+        try{
+            const query = req.query;
+            console.log("query: ", query);
+            const values = Object.values(query);
+            console.log("values: ", values);
+            const convertNum = values.map((numero) => {
+                return Number (numero);
+            });
+            console.log("conversão: ", convertNum);
+            const multiplicacao = await_Cal_Mod.multiplicacao(...convertNum);
+            res.status(200).json({
+                resultato: multiplicacao,
+                erro: false
+            });
+        }  catch(erro){
+            if(erro){
+                res.status(400).json({mensagem: "", erro: true});
+            }
+        }
+    }
 };
 
 module.exports = Cal_Cont;
