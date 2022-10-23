@@ -1,7 +1,6 @@
 # ToDo7_Calculadora
 
-Pré requisitos do Projeto
-
+Pré Requisitos do Projetos
 ● A aplicação deve ter quatro rotas: somar, subtrair, dividir e multiplicar.
 ● As rotas devem receber dois valores que serão utilizados na operação.
 ● O projeto precisa estar publicado no Github e os commits devem ser realizados em etapas,
